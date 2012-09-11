@@ -1,0 +1,16 @@
+Restore a backup into a new or existing course:
+  $ php restore.php [options] backup_file_path{zip|mbz}
+
+Options:
+-h, --help                      Print out this help
+-s, --silently                  Don't print verbose progess information
+-d, --delete                    Delete existing course content before restore (default: adding)
+-e, --keep_enrols               Keep roles and enrolments when deleting the course content (default: remove)
+-g, --keep_groups               Keep groups and groupings when deleting the course content default: remove)
+-u, --userinfo                  Include user info when restoring a course
+    --target=[new|course_id|course_shortname]  Execute restore into the target course (default: new)
+    --category=[category_id|category_idnumber] Where to put the new course (default: 'Restored Courses')
+
+Example:
+$ php restore.php -s -d --target='course_shortname XYZ' teste.mbz
+$ php restore.php teste.zip
