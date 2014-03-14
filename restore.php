@@ -13,7 +13,7 @@ ini_set("log_errors", "on");
 $time_start = time();
 
 list($options, $unrecognized) = cli_get_params(
-        array('user'        => false,
+        array('userinfo'        => false,
               'delete'      => false,
               'keep_enrols' => false,
               'keep_groups' => false,
@@ -21,7 +21,7 @@ list($options, $unrecognized) = cli_get_params(
               'help'        => false,
               'target'      => 'new',
               'category'    => ''),
-        array('u' => 'user',
+        array('u' => 'userinfo',
               'd' => 'delete',
               'e' => 'keep_enrols',
               'g' => 'keep_groups',
